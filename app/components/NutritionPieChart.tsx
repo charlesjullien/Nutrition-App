@@ -64,7 +64,7 @@ export default function NutritionPieChart({ food, weight, isDarkMode }: Nutritio
       },
       tooltip: {
         callbacks: {
-          label: function(context: any) {
+          label: function(context: { label: string; raw: number }) {
             const label = context.label || '';
             const value = context.raw.toFixed(1);
             return `${label}: ${value}g`;

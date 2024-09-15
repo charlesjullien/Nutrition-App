@@ -35,7 +35,7 @@ export default function NutritionInfo({ food, weight, isDarkMode }: NutritionInf
 
   const renderCarbohydrates = () => {
     const carbs = food.nutritionPer100g.carbohydrates;
-    const carbEntries = Object.entries(carbs).filter(([_, value]) => value > 0);
+    const carbEntries = Object.entries(carbs).filter(([, value]) => value > 0);
     
     if (carbEntries.length === 0) return null;
 

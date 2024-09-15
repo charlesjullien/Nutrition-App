@@ -61,7 +61,7 @@ export default function NutritionBarChart({ food, isDarkMode }: NutritionBarChar
       },
       tooltip: {
         callbacks: {
-          label: function(context: any) {
+          label: function(context: { parsed: { x: number } }) {
             return `${context.parsed.x.toFixed(1)}g`;
           }
         }
@@ -72,7 +72,7 @@ export default function NutritionBarChart({ food, isDarkMode }: NutritionBarChar
         beginAtZero: true,
         ticks: {
           color: isDarkMode ? 'white' : 'black',
-          callback: function(value: any) {
+          callback: function(value: number) {
             return `${value}g`;
           }
         },
