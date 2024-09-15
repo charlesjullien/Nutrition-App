@@ -1,0 +1,17 @@
+voici ce que j'ai pour 100 g d'amandes : 
+
+"
+Nutritional Information for 100g of Almond
+Calories: 579.00 kcal
+Protein: 21.20g
+Carbohydrates: 21.70g
+Fat: 49.90g
+Vitamins:
+Vitamin C: 0.00mg
+Vitamin B6: 0.10mg
+Minerals:
+Potassium: 733.00mg
+Magnesium: 270.00mg
+"
+
+Je veux que tu n'affiches rien si les infos nutritionelles sont à 0.00 g ou mg. Comme les vitamines c ici par exemple.
