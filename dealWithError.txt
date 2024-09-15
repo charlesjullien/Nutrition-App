@@ -1,2 +1,55 @@
-quand je veux tapper un ingredient dans la barre de recherche du site, rien ne se passe et ej n'ai pas de suggestion d'ingredient qui s'affiche.
-De plus, le bouton de comparaispn n'apparait pas...
+Deployment Details
+
+Build Logs
+50s
+
+All Logs (58)
+
+Errors (0)
+
+Warnings (0)
+Find in logs
+CtrlF
+Running build in Washington, D.C., USA (East) – iad1
+Cloning github.com/charlesjullien/Nutrition-App (Branch: main, Commit: 8bb2475)
+Previous build cache not available
+Cloning completed: 493.546ms
+Running "vercel build"
+Vercel CLI 37.4.0
+Installing dependencies...
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated @humanwhocodes/config-array@0.11.14: Use @eslint/config-array instead
+npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+added 374 packages in 19s
+139 packages are looking for funding
+  run `npm fund` for details
+Running "npm run build"
+> nutrition-app@0.1.0 build
+> next build
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+Deployment Summary
+1s
+No framework detected
+
+
+Static Assets
+
+
+All (1)
+
+
+/placeholder.txt
+27 B 
+
+
+Assigning Custom Domains
+1s
+nutrition-app-r8sy.vercel.app
+·
+Custom Domain
