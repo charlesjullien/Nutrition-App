@@ -12,7 +12,10 @@ interface NutritionPieChartProps {
 }
 
 export default function NutritionPieChart({ food, weight, isDarkMode }: NutritionPieChartProps) {
-  const calculateNutrition = (nutrient: keyof Food['nutritionPer100g']) => {
+  const calculateNutrition = (nutrient: 'protein' | 'carbohydrates' | 'fat') => {
+    if (nutrient === 'carbohydrates') {
+      return (food.nutritionPer100g.carbohydrates.total * weight) / 100;
+    }
     return (food.nutritionPer100g[nutrient] * weight) / 100;
   };
 
