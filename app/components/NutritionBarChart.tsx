@@ -43,7 +43,7 @@ export default function NutritionBarChart({ food, isDarkMode }: NutritionBarChar
     ],
   };
 
-  const options = {
+  const options: any = {
     indexAxis: 'y' as const,
     responsive: true,
     maintainAspectRatio: false,
@@ -61,7 +61,7 @@ export default function NutritionBarChart({ food, isDarkMode }: NutritionBarChar
       },
       tooltip: {
         callbacks: {
-          label: function(context: { parsed: { x: number } }) {
+          label: function(context: any) {
             return `${context.parsed.x.toFixed(1)}g`;
           }
         }
