@@ -1,6 +1,6 @@
 import React from 'react';
 import { Pie } from 'react-chartjs-2';
-import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
+import { Chart as ChartJS, ArcElement, Tooltip, Legend, ChartOptions } from 'chart.js';
 import { Food } from '../data/foodData';
 
 ChartJS.register(ArcElement, Tooltip, Legend);
@@ -43,7 +43,7 @@ export default function NutritionPieChart({ food, weight, isDarkMode }: Nutritio
     ],
   };
 
-  const options = {
+  const options: ChartOptions<'pie'> = {
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
@@ -67,10 +67,10 @@ export default function NutritionPieChart({ food, weight, isDarkMode }: Nutritio
       },
       tooltip: {
         callbacks: {
-          label: function(context: { label: string; raw: number }) {
+          label: function(context) {
             const label = context.label || '';
-            const value = context.raw.toFixed(1);
-            return `${label}: ${value}g`;
+            const value = context.raw as number;
+            return `${label}: ${value.toFixed(1)}g`;
           }
         }
       },
