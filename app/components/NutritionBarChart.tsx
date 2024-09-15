@@ -1,6 +1,6 @@
 import React from 'react';
 import { Bar } from 'react-chartjs-2';
-import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend } from 'chart.js';
+import { Chart as ChartJS, CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend, ChartOptions } from 'chart.js';
 import { Food } from '../data/foodData';
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
@@ -43,8 +43,8 @@ export default function NutritionBarChart({ food, isDarkMode }: NutritionBarChar
     ],
   };
 
-  const options: any = {
-    indexAxis: 'y' as const,
+  const options: ChartOptions<'bar'> = {
+    indexAxis: 'y',
     responsive: true,
     maintainAspectRatio: false,
     plugins: {
@@ -61,7 +61,7 @@ export default function NutritionBarChart({ food, isDarkMode }: NutritionBarChar
       },
       tooltip: {
         callbacks: {
-          label: function(context: any) {
+          label: function(context) {
             return `${context.parsed.x.toFixed(1)}g`;
           }
         }
@@ -72,7 +72,7 @@ export default function NutritionBarChart({ food, isDarkMode }: NutritionBarChar
         beginAtZero: true,
         ticks: {
           color: isDarkMode ? 'white' : 'black',
-          callback: function(value: number) {
+          callback: function(value) {
             return `${value}g`;
           }
         },
